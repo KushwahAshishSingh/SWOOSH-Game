@@ -11,6 +11,6 @@ import Foundation
 
 struct Player {
     
-    var desiredLeague: String?
+    var desiredLeague: String! // if u r sure that i ll contain data then use it.
     var selectedSkillLevel: String?
 }
