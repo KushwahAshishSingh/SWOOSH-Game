@@ -14,10 +14,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,7 +30,7 @@
                                 <rect key="frame" x="128" y="40" width="119" height="20"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GO ALL IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9l-pc-CDQ">
-                                <rect key="frame" x="57.5" y="148" width="260" height="65"/>
+                                <rect key="frame" x="58" y="148" width="260" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="260" id="V68-XX-rOP"/>
                                 </constraints>
@@ -38,8 +38,11 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Find a team in your city &amp; dominate the league" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mO6-LK-OgJ">
-                                <rect key="frame" x="57.5" y="260" width="260" height="66"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a team in your city &amp; dominate the league" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mO6-LK-OgJ">
+                                <rect key="frame" x="58" y="260" width="260" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="kur-jB-zDX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -61,7 +64,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ON GOING ALL OUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hN-mj-pwV">
-                                <rect key="frame" x="57.5" y="212.5" width="260" height="33"/>
+                                <rect key="frame" x="58" y="213" width="260" height="33"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="24"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -69,6 +72,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="mO6-LK-OgJ" firstAttribute="top" secondItem="2hN-mj-pwV" secondAttribute="bottom" constant="14" id="4V5-Os-4Vb"/>
                             <constraint firstItem="4lh-ba-aIn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4eB-55-0TP"/>
                             <constraint firstItem="v9l-pc-CDQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7aj-oj-CIe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IIR-rr-12h" secondAttribute="bottom" constant="20" id="GNg-4O-MGb"/>
@@ -98,10 +102,10 @@
             </objects>
             <point key="canvasLocation" x="-334" y="-107"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="8Bv-yc-BBI">
             <objects>
-                <viewController id="RhL-5l-S7u" sceneMemberID="viewController">
+                <viewController id="RhL-5l-S7u" customClass="LeagueVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jmX-pE-qe2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -179,6 +183,9 @@
                                     <color key="titleColor" red="0.9880952381" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="RhL-5l-S7u" eventType="touchUpInside" id="hxT-pF-6pM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPk-w6-0wu">
                                 <rect key="frame" x="0.0" y="10" width="44" height="33"/>
@@ -212,16 +219,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BXu-QI-miU"/>
                     </view>
+                    <connections>
+                        <segue destination="I7i-Ob-slC" kind="show" identifier="SkillVC" id="4ab-Mp-ncy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U0l-O9-hz3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="UUV-GS-HWu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="378" y="-107"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="EbF-ey-0Vl">
             <objects>
-                <viewController id="I7i-Ob-slC" sceneMemberID="viewController">
+                <viewController id="I7i-Ob-slC" customClass="SkillVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dPA-EL-GZe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -289,6 +299,13 @@
                                     <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oy7-ya-XpW">
+                                <rect key="frame" x="6" y="10" width="29" height="24"/>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="Ote-Vb-7Qf" kind="unwind" unwindAction="unwindFromSkillVCWithLeagueVC:" id="CHU-2k-lcp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -303,18 +320,20 @@
                             <constraint firstItem="waT-Nt-seY" firstAttribute="bottom" secondItem="5gO-3V-4cg" secondAttribute="bottom" constant="20" id="bjb-wZ-HZc"/>
                             <constraint firstItem="8mN-pw-JHl" firstAttribute="top" secondItem="dPA-EL-GZe" secondAttribute="top" id="dJx-Ca-AQB"/>
                             <constraint firstItem="8mN-pw-JHl" firstAttribute="bottom" secondItem="waT-Nt-seY" secondAttribute="bottom" id="dNi-2Q-xGc"/>
-                            <constraint firstItem="5gO-3V-4cg" firstAttribute="leading" secondItem="dPA-EL-GZe" secondAttribute="leading" id="dYQ-Kx-217"/>
                             <constraint firstItem="8mN-pw-JHl" firstAttribute="top" secondItem="dPA-EL-GZe" secondAttribute="top" id="enI-BI-AHl"/>
                             <constraint firstItem="cpD-Ht-TdS" firstAttribute="leading" secondItem="waT-Nt-seY" secondAttribute="leading" id="kkE-ty-faZ"/>
                             <constraint firstItem="T07-lv-zNF" firstAttribute="leading" secondItem="waT-Nt-seY" secondAttribute="leading" id="mt2-lh-qr3"/>
                             <constraint firstItem="waT-Nt-seY" firstAttribute="trailing" secondItem="8mN-pw-JHl" secondAttribute="trailing" id="pXD-R7-JDy"/>
+                            <constraint firstItem="Oy7-ya-XpW" firstAttribute="leading" secondItem="waT-Nt-seY" secondAttribute="leading" constant="6" id="qzp-7z-8S4"/>
                             <constraint firstItem="8mN-pw-JHl" firstAttribute="trailing" secondItem="waT-Nt-seY" secondAttribute="trailing" id="tus-j9-VFu"/>
+                            <constraint firstItem="Oy7-ya-XpW" firstAttribute="top" secondItem="dPA-EL-GZe" secondAttribute="top" constant="10" id="vUr-Re-Rmf"/>
                             <constraint firstItem="waT-Nt-seY" firstAttribute="trailing" secondItem="T07-lv-zNF" secondAttribute="trailing" id="wrd-GZ-4Y2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="waT-Nt-seY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LQz-VZ-hg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ote-Vb-7Qf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1154" y="-107"/>
         </scene>
